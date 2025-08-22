@@ -1,0 +1,14 @@
+# Normalize line endings to LF in the repo
+* text=auto eol=lf
+
+# For Windows users: ensure scripts keep CRLF if needed
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binary files (Git should not touch line endings here)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.hdf5 binary
+*.csv text eol=lf
