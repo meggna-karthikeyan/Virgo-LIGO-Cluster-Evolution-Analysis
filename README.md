@@ -6,8 +6,6 @@ Gravitational-wave astronomy relies on networks of detectors that operate in coi
 
 This repository presents a **reproducible visualization pipeline** designed to interrogate how Virgo behaves in comparison to LIGO detectors during coincident operation. By examining trigger clusters in mass–mass space, and comparing them against the astrophysical template bank, we create high-resolution plots and movies that illuminate both agreements and divergences between detectors. These visual artifacts support both research discussions and presentations at conferences.
 
----
-
 ## Problem Statement
 
 The three-detector network (Hanford, Livingston, Virgo) enables robust gravitational-wave detections. However:
@@ -21,23 +19,17 @@ In practice, Virgo data are often down-weighted or discarded. This project asks:
 * How do Virgo’s trigger clusters compare in distribution to those from LIGO?
 * What visualization strategies can make these differences interpretable?
 
----
-
 ## Objectives
 
 * Obtain coincident, unclustered triggers with simulated injections across V1, L1, H1.
 * Analyze detector trigger patterns by focusing on **component masses** (mass₁, mass₂).
 * Construct reproducible pipelines that generate plots and movies for conference/talk settings.
 
----
-
 ## Goals
 
 * Predict when Virgo diverges or fails to detect injections.
 * Explore whether alternative detection statistics could improve the chance of achieving consistent **triple coincidences** across all detectors.
 * Demonstrate the value of **visualization-driven exploration** as a tool for better utilizing less-sensitive detectors.
-
----
 
 ## Methodology
 
@@ -85,16 +77,12 @@ In practice, Virgo data are often down-weighted or discarded. This project asks:
    * **Resume Mode**: skips frames that already exist, enabling continuation after interruptions.
    * **Fresh Run Detection**: if all frames exist, clears folders and regenerates outputs.
 
----
-
 ## Deliverables
 
 * **MP4 movies** showing cluster evolution across detectors (**main output**).
 * **High-resolution plots** saved in `Plots/` (supporting output, useful for individual inspection).
 * **Frame-by-frame PNGs** saved in `Frames/` (intermediate output, used to build the movies).
 * **Cluster analysis code** stored in each detector-pair (or triple) folder for reproducibility.
-
----
 
 ## Results (High-Level)
 
@@ -109,8 +97,6 @@ In practice, Virgo data are often down-weighted or discarded. This project asks:
 * Extend analysis of **Virgo’s response differences** across mass space.
 * Investigate **modifications to detection statistics** to enhance triple coincidences.
 * Incorporate **machine learning classification** of clusters to predict detector-specific performance.
-
----
 
 ## Repository Structure
 
@@ -140,8 +126,6 @@ V1 - L1 - H1 Cluster Analysis/
   Virgo - Livingston - Hanford Cluster Evolution.mp4
 ```
 
----
-
 ## How to Run
 
 1. Place the required input files under `Modified Data/`.
@@ -149,10 +133,6 @@ V1 - L1 - H1 Cluster Analysis/
 3. Run the notebook cells.
 4. Find per-cluster plots under `Plots/`, frame-by-frame images under `Frames/`, and MP4 movies in the analysis folder.
 
----
-
 ## Acknowledgments
 
 This work was carried out as part of my **Master’s final project**. I am deeply grateful to my professor, who provided the data and guidance that made this research possible. I also acknowledge the broader gravitational-wave community, particularly the **LIGO–Virgo Collaboration**, whose pioneering work in building and operating these detectors created the foundation for this analysis.
-
----
