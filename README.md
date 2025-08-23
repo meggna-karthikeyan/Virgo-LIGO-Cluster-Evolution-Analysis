@@ -1,6 +1,6 @@
 # Virgo Livingston Hanford Cluster Analysis
 
-<img width="940" height="509" alt="image" src="https://github.com/user-attachments/assets/8863dbf9-becd-41ad-83bc-d38380799e15" />
+<img width="1010" height="509" alt="image" src="https://github.com/user-attachments/assets/8863dbf9-becd-41ad-83bc-d38380799e15" />
 
 ## Abstract
 
