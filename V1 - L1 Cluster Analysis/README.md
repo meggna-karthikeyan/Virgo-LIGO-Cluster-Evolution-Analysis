@@ -6,8 +6,6 @@ This notebook analyzes gravitational-wave trigger clusters observed in coinciden
 
 The output of this analysis is both **plots** (static, per-cluster) and a **movie** that visualizes cluster evolution across the two detectors.
 
----
-
 ## Data Preprocessing
 
 * The **original trigger catalogs** included a column named **`InsideH1L1V1`**, which records whether all three detectors (Hanford, Livingston, Virgo) were simultaneously online.
@@ -16,8 +14,6 @@ The output of this analysis is both **plots** (static, per-cluster) and a **movi
   * `0` → one or more detectors offline
 * Data was **filtered to retain only rows where `InsideH1L1V1 = 1`**, ensuring analysis focuses exclusively on periods of true three-detector operation.
 * From these filtered catalogs, we used only the **Cluster IDs** that appeared in both V1 and L1.
-
----
 
 ## Code Walkthrough and Motivation
 
@@ -31,8 +27,6 @@ The notebook begins by setting paths to:
 
 👉 *Motivation*: Keeping data and outputs organized by detector pair makes the workflow reproducible and modular.
 
----
-
 ### 2. Reading Trigger Data
 
 CSV files for Virgo and Livingston are loaded into Pandas DataFrames. Each trigger contains:
@@ -43,8 +37,6 @@ CSV files for Virgo and Livingston are loaded into Pandas DataFrames. Each trigg
 
 👉 *Motivation*: These variables allow comparison of astrophysical parameter distributions between detectors.
 
----
-
 ### 3. Clipping for Stability
 
 * Masses clipped below `10⁻³` → prevents issues when plotting on logarithmic axes.
@@ -52,15 +44,11 @@ CSV files for Virgo and Livingston are loaded into Pandas DataFrames. Each trigg
 
 👉 *Motivation*: Clipping ensures meaningful visualization across clusters without distortion, keeping attention on the astrophysically relevant parameter space.
 
----
-
 ### 4. Template Bank Overlay
 
 The template bank is read from the HDF5 file and plotted faintly in the background of all cluster plots.
 
 👉 *Motivation*: The template bank represents the **full search space** of possible binary systems. Overlaying it provides astrophysical context for where triggers fall relative to expectations.
-
----
 
 ### 5. Cluster Identification
 
@@ -68,8 +56,6 @@ The template bank is read from the HDF5 file and plotted faintly in the backgrou
 * Only common clusters are retained, since these represent coincident detections across detectors.
 
 👉 *Motivation*: Coincidences are critical for confirming astrophysical events and reducing false alarms.
-
----
 
 ### 6. Resume Logic
 
@@ -79,8 +65,6 @@ Before plotting:
 * Otherwise, **resume mode** skips clusters that already have frames.
 
 👉 *Motivation*: Enables long runs without wasting time or redoing completed work, especially helpful for large datasets or when memory errors interrupt execution.
-
----
 
 ### 7. Plotting Logic
 
@@ -98,8 +82,6 @@ For each common cluster:
 * Side-by-side comparison highlights **agreement and divergence** between Virgo and Livingston.
 * Shared scales and colorbar ensure **visual consistency** across plots and clusters.
 
----
-
 ### 8. Output Generation
 
 * Each cluster produces two PNGs:
@@ -114,18 +96,12 @@ For each common cluster:
 * Still plots are useful for deep dives into specific clusters.
 * Movies enable rapid, qualitative assessment of detector behavior across many clusters — ideal for talks, posters, and teaching.
 
----
-
 ## Outputs
 
 * **Plots/** → high-resolution static images per cluster
 * **Frames/** → sequential PNGs used to build the movie
 * **Virgo – Livingston Cluster Evolution.mp4** → **main deliverable** movie
 
----
-
 ## Conclusion
 
 The V1–L1 cluster analysis demonstrates how Virgo (less sensitive) compares with Livingston (more sensitive) across coincident triggers. While Virgo often reports fewer triggers, the visualization pipeline reveals where it aligns with Livingston clusters and where it fails to detect. The resulting movies and plots serve as **intuitive tools** for understanding Virgo’s contribution in a three-detector network and for communicating findings in academic settings.
-
----
