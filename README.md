@@ -92,8 +92,6 @@ In practice, Virgo data are often down-weighted or discarded. This project asks:
 * Demonstrated clear regions where Virgo’s clusters align with LIGO versus regions where Virgo fails to detect.
 * Delivered movies that serve as **conference-ready visual artifacts**, aiding rapid communication of results.
 
----
-
 ## Future Scope
 
 * Extend analysis of **Virgo’s response differences** across mass space.
