@@ -1,7 +1,5 @@
 # Virgo Livingston Hanford Cluster Analysis
 
-![image](<img width="1200" height="650" alt="image" src="https://github.com/user-attachments/assets/7a8e00c1-01d9-439d-865b-6b638b1c3b78" />)
-
 ## Abstract
 
 Gravitational-wave astronomy relies on networks of detectors that operate in coincidence to improve both sensitivity and confidence in detections. LIGO Hanford and LIGO Livingston typically operate with near-equal sensitivities, whereas Virgo often contributes fewer or weaker triggers due to its lower sensitivity. This asymmetry creates a **data interpretation problem**: Virgo’s information may be treated as non-informative, counter-intuitive, or discarded altogether.
