@@ -6,8 +6,6 @@ This notebook investigates clusters that are **simultaneously observed in all th
 
 The outputs include **plots, frames, and a movie** visualizing the evolution of triple-detector clusters across mass space.
 
----
-
 ## Data Preprocessing
 
 * The **original catalogs** contained a column **`InsideH1L1V1`**, which indicates whether all three detectors were online.
@@ -18,8 +16,6 @@ The outputs include **plots, frames, and a movie** visualizing the evolution of 
 * Only **Cluster IDs** that appeared in **all three catalogs (V1, L1, H1)** were retained for visualization.
 
 👉 *Motivation*: This guarantees that results represent genuine triple coincidences, not pairwise overlaps or single-detector events.
-
----
 
 ## Code Walkthrough and Motivation
 
@@ -32,8 +28,6 @@ Paths are defined for:
 * Output directories (`Plots/`, `Frames/`) and movie file path.
 
 👉 *Motivation*: Keeping data and outputs organized by analysis type makes results reproducible and modular.
-
----
 
 ### 2. Reading and Cleaning Data
 
@@ -50,15 +44,11 @@ Preprocessing:
 
 👉 *Motivation*: These steps ensure that the visualizations highlight astrophysical structures, not numerical extremes.
 
----
-
 ### 3. Template Bank Overlay
 
 The template bank is loaded and plotted as a faint gray background on all axes.
 
 👉 *Motivation*: Provides astrophysical context, showing where clusters fall relative to the expected parameter space of binary systems.
-
----
 
 ### 4. Identifying Triple-Detector Clusters
 
@@ -66,16 +56,12 @@ Clusters are selected where the `Cluster ID` is present in all three catalogs. T
 
 👉 *Motivation*: Coincidence across three detectors is the gold standard for gravitational-wave detection confidence.
 
----
-
 ### 5. Resume Logic
 
 * If **all expected frames** are already present in both `Plots/` and `Frames/`, a **fresh run** clears them and regenerates outputs.
 * Otherwise, **resume mode** skips clusters with existing frames.
 
 👉 *Motivation*: Ensures efficiency and robustness against interruptions or long runtimes.
-
----
 
 ### 6. Plotting Logic
 
@@ -94,8 +80,6 @@ For each triple-detected cluster:
 * **Shared colorbar and axes** ensure direct comparability.
 * **Triple layout** reflects the structure of the gravitational-wave detector network.
 
----
-
 ### 7. Output Generation
 
 * Per-cluster PNGs in `Plots/`.
@@ -108,18 +92,12 @@ For each triple-detected cluster:
 * Still images aid detailed inspection of individual clusters.
 * The movie provides a rapid, intuitive overview of triple-detector consistency.
 
----
-
 ## Outputs
 
 * **Plots/** → high-resolution per-cluster static images.
 * **Frames/** → sequential PNGs used to generate the movie.
 * **Virgo – Livingston – Hanford Cluster Evolution.mp4** → **main deliverable**, summarizing all clusters in motion.
 
----
-
 ## Conclusion
 
 This analysis demonstrates the behavior of clusters simultaneously observed in Virgo, Livingston, and Hanford. Despite Virgo’s lower sensitivity, requiring its presence ensures that only the **strongest, most robust clusters** are visualized. The resulting plots and movie serve as a compelling demonstration of **network-level consistency** and are well-suited for presentations and further comparative studies.
-
----
